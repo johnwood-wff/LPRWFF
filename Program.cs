@@ -45,10 +45,10 @@ namespace LPRWFF
             string Password = "SMRT@admin";
             string Server = "http://smrt.workflowfirst.net/vms2";
             int Port = 8002;
-            if (File.Exists(Path.Combine(Environment.CurrentDirectory, "lprwff.cfg")))
+            if (File.Exists(Path.Combine(Environment.CurrentDirectory, "settings.cfg")))
             {
                 // if there is an email server, then use that to retrieve the username etc.
-                foreach (string line in File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "emailserver.cfg")))
+                foreach (string line in File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "settings.cfg")))
                 {
                     if (line.Contains("="))
                     {
